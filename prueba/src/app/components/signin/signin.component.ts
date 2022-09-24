@@ -24,9 +24,14 @@ export class SigninComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          alert('Logged in successfully')
           this.router.navigate(['/private']);
         },
-        err => console.log(err)
+        err => {
+          console.log(err)
+          alert('Wrong credentials, plsease try again')
+        }
+        
       )
   }
 

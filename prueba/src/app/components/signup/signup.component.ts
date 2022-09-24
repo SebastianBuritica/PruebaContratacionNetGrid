@@ -24,9 +24,13 @@ export class SignupComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          alert('User created successfully')
           this.router.navigate(['/private']);
         },
-        err => console.log(err)
+        err => {
+          console.log(err)
+          alert('Unable to process the request, plsease try again')
+        }
       )
   }
 

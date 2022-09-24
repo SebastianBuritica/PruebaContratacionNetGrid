@@ -8,14 +8,14 @@ import { Post } from '../../models/Post';
 })
 export class PostComponent implements OnInit {
   @Input() post: Post;
-  @Output() onDeleteTask: EventEmitter<Post> = new EventEmitter();
+  @Output() onDeletePost: EventEmitter<Post> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  onDelete(task) {
-    this.onDeleteTask.emit(task);
+  onDelete(post) {
+    this.onDeletePost.emit(post);
   }
 
 }

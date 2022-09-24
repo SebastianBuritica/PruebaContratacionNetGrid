@@ -28,4 +28,8 @@ export class RestService {
     const url = `${this.deleteUrl}/${post.id}`;
     return this.http.delete<Post>(url);
   }
+
+  addPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(this.apiUrl, post, httpOptions);
+  }
 }
