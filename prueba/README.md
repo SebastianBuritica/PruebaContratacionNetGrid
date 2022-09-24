@@ -1,6 +1,7 @@
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+Para utilizar la aplicacion se puede descargar el zip o clonar los archivos, al abrir la carpeta de la aplicacion con visual studio code o el editor de texto de preferencia corre el comando en la terminal : npm install.
 
 ## Development server
 
