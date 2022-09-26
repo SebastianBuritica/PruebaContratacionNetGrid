@@ -14,6 +14,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     PostComponent,
     PostsComponent,
     ButtonComponent,
-    PostFormComponent
+    PostFormComponent,
+    EditPostComponent,
+    
   ],
   imports: [
     BrowserModule,

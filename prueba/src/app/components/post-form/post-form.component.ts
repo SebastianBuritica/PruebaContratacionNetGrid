@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  @Output() onAddPost: EventEmitter<Post> = new EventEmitter();
+  // @Output() onAddPost: EventEmitter<Post> = new EventEmitter();
   // alert: boolean = false;
   title: string;
   body: string;
@@ -73,7 +73,7 @@ export class PostFormComponent implements OnInit {
     // this.body = '';
   }
 
-  
+   
 
 
   

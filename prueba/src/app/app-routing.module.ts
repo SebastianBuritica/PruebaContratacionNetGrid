@@ -6,6 +6,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path: 'add',
     component: PostFormComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit/:id',
+    component: EditPostComponent,
     canActivate: [AuthGuard]
   }
 ];

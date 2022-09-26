@@ -13,6 +13,7 @@ export class AuthGuard implements CanActivate {
   ) { }
 
   canActivate(): boolean {
+    // If the loggedIn method returns true, the user is logged in and can access the route
     if (this.authService.loggedIn()) {
       return true;
     }

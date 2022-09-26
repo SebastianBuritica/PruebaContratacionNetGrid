@@ -12,6 +12,8 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+        <!-- The ng-container will serve as a div, if the authService loggedIn method returns false it means
+        that there is no token in the localStorage therefore the user is not logged in so we will show this two nav-items -->
         <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
           <li class="nav-item">
             <a class="nav-link" routerLink="/signin" routerLinkActive="active">SignIn</a>
@@ -20,6 +22,7 @@
             <a class="nav-link" routerLink="/signup" routerLinkActive="active">SignUp</a>
           </li>
         </ng-container>
+        <!-- When we click on this nav-item we will be calling our logout method to destroy the token -->
         <ng-template #loggedIn>
           <li class="nav-item">
             <a class="nav-link" style="cursor: pointer;"  (click)="authService.logout()">Logout</a>
@@ -33,3 +36,4 @@
 <div class="container p-5">
   <router-outlet></router-outlet>
 </div>
+

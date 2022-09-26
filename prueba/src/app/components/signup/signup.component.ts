@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
         },
         err => {
           console.log(err)
-          alert('Unable to process the request, plsease try again')
+          alert('Unable to process the request, please try again')
         }
       )
   }

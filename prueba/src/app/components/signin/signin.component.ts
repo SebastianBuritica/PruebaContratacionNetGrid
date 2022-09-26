@@ -23,6 +23,7 @@ export class SigninComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res);
+          // We save the token in the local storage
           localStorage.setItem('token', res.token);
           alert('Logged in successfully')
           this.router.navigate(['/private']);

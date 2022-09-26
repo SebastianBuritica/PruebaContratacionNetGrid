@@ -30,8 +30,8 @@ export class PostsComponent implements OnInit {
       .subscribe(() => (this.posts = this.posts.filter((p) => p.id !== post.id)));
   }
 
-  addPost(post: Post) {
-    this.restService.addPost(post).subscribe((post) => this.posts.push(post));
-  }
+  // addPost(post: Post) {
+  //   this.restService.addPost(post).subscribe((post) => this.posts.push(post));
+  // }
 
 }

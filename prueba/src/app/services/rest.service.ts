@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class RestService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-  private deleteUrl = 'https://jsonplaceholder.typicode.com/posts/1'
+  private deleteUrl = 'https://jsonplaceholder.typicode.com/posts'
 
   constructor(private http: HttpClient) { }
 
@@ -31,5 +31,10 @@ export class RestService {
 
   addPost(post: Post): Observable<Post> {
     return this.http.post<Post>(this.apiUrl, post, httpOptions);
+  }
+
+  updatePost(post: Post): Observable<Post> {
+    const url = `${this.apiUrl}/${post.id}`;
+    return this.http.put<Post>(url, post, httpOptions);
   }
 }
